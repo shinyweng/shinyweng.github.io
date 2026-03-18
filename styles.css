@@ -664,6 +664,18 @@ body[data-mode="dark"] .brand-mark:focus-visible {
   display: block;
 }
 
+.timeline-meta {
+  display: grid;
+  gap: 6px;
+}
+
+.timeline-company,
+.timeline-location-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .timeline-org {
   color: var(--ink);
   font-weight: 600;
@@ -671,6 +683,38 @@ body[data-mode="dark"] .brand-mark:focus-visible {
 
 .timeline-location {
   color: var(--muted);
+}
+
+.company-logo,
+.timeline-location-icon {
+  flex: 0 0 auto;
+}
+
+.company-logo {
+  width: 28px;
+  height: 28px;
+  display: block;
+  object-fit: contain;
+}
+
+.company-logo-amazon {
+  width: 22.4px;
+  height: 22.4px;
+}
+
+.company-logo-stanford,
+.company-logo-berkeley,
+.company-logo-ucsf {
+  width: 24px;
+  height: 24px;
+}
+
+.timeline-location-icon {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  opacity: 0.55;
 }
 
 .publications-note {
@@ -835,6 +879,20 @@ body[data-mode="dark"] .brand-mark:focus-visible {
   font-size: 1rem;
 }
 
+.subtle-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(30, 35, 48, 0.18);
+  text-underline-offset: 0.16em;
+  transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+
+.subtle-link:hover,
+.subtle-link:focus-visible {
+  color: var(--ink);
+  text-decoration-color: rgba(30, 35, 48, 0.34);
+}
+
 .mimi-link {
   display: inline-flex;
   align-items: center;
@@ -888,10 +946,29 @@ body[data-mode="dark"] .brand-mark:focus-visible {
 
 .footer {
   margin-top: 72px;
-  padding: 28px 0 8px;
+  padding: 32px 0 8px;
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.95rem;
+  text-align: center;
+}
+
+.footer-title,
+.footer-copy {
+  margin: 0;
+}
+
+.footer-title {
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
+
+.footer-copy {
+  max-width: 42rem;
+  margin-inline: auto;
 }
 
 
